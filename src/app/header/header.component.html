@@ -1,0 +1,28 @@
+<kendo-appbar class="top-nav-bar">
+    <kendo-appbar-section class="nav-bar">
+        <div class="contents" *ngFor="let content of menuContent">
+            <div class="content">
+                <a href="#">{{content}}</a>
+                <span class="hor-line"></span>
+            </div>
+            <span class="k-appbar-separator"></span>
+        </div>
+    </kendo-appbar-section>
+    <kendo-appbar-spacer width="15%"></kendo-appbar-spacer>
+    <kendo-appbar-section class="profile">
+        <div>
+            <kendo-button class="search-btn" iconClass="fa-solid fa-magnifying-glass fa-lg"></kendo-button>
+        </div>
+        <div>
+            <kendo-button class="noti-btn" iconClass="fa-regular fa-bell fa-lg">
+                <span class="noti-no">15</span>
+            </kendo-button>
+
+        </div>
+        <div>
+            <kendo-button class="avatar-btn" imageUrl="assets/header-assets/avatar.png">
+                <span class="activity"></span>
+            </kendo-button>
+        </div>
+    </kendo-appbar-section>
+</kendo-appbar>

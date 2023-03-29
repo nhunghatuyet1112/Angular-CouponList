@@ -1,0 +1,95 @@
+<div class="check-add-container">
+    <div class="check-container">
+        <div class="voucher-container">
+            <kendo-label class="check-voucher-label" [for]="vouchers">Phiếu mua hàng</kendo-label>
+            <input [(ngModel)]="checkedVoucher" (change)="onChangeVoucher(checkedVoucher)" #vouchers type="checkbox"
+                rounded="medium" kendoCheckBox>
+        </div>
+        <div class="coupon-container">
+            <kendo-label class="check-coupon-label" [for]="vouchers">Coupon</kendo-label>
+            <input [(ngModel)]="checkedCoupon" (change)="onChangeCoupon(checkedCoupon)" #coupon type="checkbox"
+                rounded="medium" kendoCheckBox>
+        </div>
+    </div>
+    <div class="add-btn-container">
+        <kendo-button (click)="addButton()" class="add-btn-1" iconClass="fa-regular fa-plus">
+            TẠO MỚI
+            <kendo-button class="add-btn-2" iconClass="fa-solid fa-chevron-down"></kendo-button>
+        </kendo-button>
+    </div>
+</div>
+
+<div class="filter-container">
+    <div class="delete-filter">
+        <div class="filter-label">
+            <img src="assets/filter-assets/filter.png">
+            <p>LỌC DỮ LIỆU</p>
+        </div>
+        <kendo-button class="delete-btn" (click)="getCoupons(); searchInput.value = ''">Xóa bộ lọc</kendo-button>
+    </div>
+    <div class="search-filter">
+        <kendo-label class="search-label" [for]="searchInput" text="Tìm kiếm">
+        </kendo-label>
+        <kendo-textbox (keydown.enter)="searchFilter(searchInput.value)" class="search-input" #searchInput
+            placeholder="Tìm theo tên phân nhóm, tiếp đầu ngữ" [style.width.px]="452">
+            <ng-template kendoTextBoxPrefixTemplate>
+                <kendo-button fillMode="clear" iconClass="fa-solid fa-magnifying-glass"></kendo-button>
+            </ng-template>
+        </kendo-textbox>
+        <kendo-button (click)="searchFilter(searchInput.value)" [style.height.px]="29" class="search-btn"
+            iconClass="fa-solid fa-magnifying-glass">Tìm</kendo-button>
+    </div>
+</div>
+
+<div class="coupons-grid">
+    <ng-container>
+        <kendo-grid [kendoGridBinding]="coupons" [pageSize]="10" [pageable]="true" scrollable="none">
+            <kendo-grid-column field="phanNhom" title="Phân nhóm" [width]="450" [headerClass]="'headerCustomClass'">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                    <p>{{dataItem.phanNhom.phanNhom}}</p>
+                    <p><i style="font-weight: 700; color: #959DB3;">Phân nhóm cha |
+                        </i>{{dataItem.phanNhom.phanNhomCha}}</p>
+                </ng-template>
+            </kendo-grid-column>
+
+            <kendo-grid-column field="tiepDauNgu" title="Tiếp đầu ngữ" [width]="205"
+                [headerClass]="'headerCustomClass'">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                    <p>{{dataItem.tiepDauNgu.tiepDauNgu}}</p>
+                    <p><i style="font-weight: 400; color: #5A6276; ">{{dataItem.tiepDauNgu.tiepDauNgu2}}</i></p>
+                </ng-template>
+            </kendo-grid-column>
+
+            <kendo-grid-column field="giaTri" title="Giá trị PMH/Coupon" [width]="40"
+                [headerClass]="'headerCustomValueClass'">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                    <p class="gia-tri">{{dataItem.giaTri}}</p>
+                </ng-template>
+            </kendo-grid-column>
+
+            <kendo-grid-column field="dienGiai" title="Diễn giải" [width]="350" [headerClass]="'headerCustomClass'">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                    <p style="font-weight: 400; color: #5A6276;">{{dataItem.dienGiai}}</p>
+                </ng-template>
+            </kendo-grid-column>
+
+            <kendo-grid-column field="id" title="" [width]="5" [headerClass]="'headerCustomClass'">
+                <ng-template kendoGridCellTemplate let-dataItem>
+                    <kendo-button (click)="log(dataItem.id)" class="whole-cell"
+                        iconClass="fa-solid fa-ellipsis"></kendo-button>
+                </ng-template>
+            </kendo-grid-column>
+            <ng-template kendoPagerTemplate let-totalPages="totalPages" let-currentPage="currentPage">
+                <kendo-pager-page-sizes class="page-sizes" [pageSizes]="sizes"></kendo-pager-page-sizes>
+                <div style="display: flex; float: right;">
+                    <kendo-pager-prev-buttons class="prev-btn"></kendo-pager-prev-buttons>
+                    <kendo-pager-numeric-buttons class="count-btn" class="custom-btn"
+                        [buttonCount]="buttonCount"></kendo-pager-numeric-buttons>
+                    <kendo-pager-next-buttons class="next-btn"></kendo-pager-next-buttons>
+                </div>
+
+            </ng-template>
+        </kendo-grid>
+    </ng-container>
+
+</div>

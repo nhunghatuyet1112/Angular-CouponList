@@ -1,0 +1,244 @@
+.check-add-container {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #BDC2D2;
+    .check-container {
+        display: inline-flex;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 16px;
+        color: #959DB3;
+        padding-top: 5px;
+        .voucher-container {
+            border: 2px solid #008000;
+            border-radius: 14px;
+            background-color: #FFFFFF;
+            padding: 5px;
+            .check-voucher-label {
+                background-color: #FFFFFF;
+                margin-right: 10px;
+            }
+        }
+
+
+        .coupon-container {
+            border: 2px solid #FFFFFF;
+            border-radius: 14px;
+            background-color: #FFFFFF;
+            padding: 5px;
+            margin-left: 10px;
+            .check-coupon-label {
+                background-color: #FFFFFF;
+                margin-right: 10px;
+            }
+        }
+
+        .k-checkbox:checked {
+            border-color: #008000;
+            background-color: #008000;
+            box-shadow: none;
+        }
+
+        .k-checkbox:focus {
+            box-shadow: none;
+        }
+    }
+    .add-btn-container {
+        float:right;
+        .add-btn-1 {
+            background-color: #1A6634;
+            font-weight: 700;
+            font-size: 11px;
+            line-height: 14px;
+            color: #FFFFFF;
+            padding-inline: 0%;
+        }
+
+        .add-btn-1:focus {
+            box-shadow: none;
+        }
+        .add-btn-2 {
+            background-color: #1A6634;
+            color: #FFFFFF;
+            border-style: none ;
+        }
+        .add-btn-2:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.filter-container {
+    padding: 20px 0px 15px 0px;
+    display: flex;
+    border-bottom: 1px solid #BDC2D2;
+
+    .delete-filter {
+        .filter-label {
+            display:flex;
+            img {
+                float: left;
+            }
+            p {
+                float: left;
+                font-weight: 700;
+                font-size: 13px;
+                line-height: 16px;
+                color: #5A6276;
+                margin:0%;
+                padding-left: 5px;
+            }
+            
+        }
+        .delete-btn {
+            padding: 0%;
+            margin: 15px 0px 0px 20px;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 16px;
+            text-decoration-line: underline;
+            color: #008000;
+            border: none;
+        }
+
+        .delete-btn:focus {
+            box-shadow: none;
+        }
+
+        .delete-btn:hover {
+            background-color: transparent;
+        }
+    }
+    .search-filter {
+        margin-left: 25px;
+        .search-label {
+            margin-bottom: 8px;
+            display: block;
+            font-weight: 700;
+            font-size: 13px;
+            line-height: 16px;
+            color: #959DB3;
+        }
+        .search-input.k-input-solid {
+            border-style: none;
+        }
+        .search-input.k-input-solid:focus-within {
+            border-style: none;
+            box-shadow: none;
+        }
+        .search-btn {
+            margin-left: 5px;
+            background-color: #008000;
+            font-weight: 700;
+            font-size: 11px;
+            line-height: 14px;
+            color: #FFFFFF;
+        }
+
+        .search-btn:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+
+.coupons-grid {
+    background-color: #EDEFF3;
+    .k-grid {
+        td {
+            border-style: none;
+        }
+        .k-table {
+            border-collapse: separate;
+            border-spacing: 0px 10px;
+            background-color: #EDEFF3;
+    
+            .headerCustomClass {
+                background-color: #EDEFF3;
+                border-inline-start-width: 0px;
+                border-inline-end-width: 0px;
+                border: none;
+                span {
+                    font-weight: 700;
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: #5A6276;
+                }
+            }
+            .headerCustomValueClass {
+                background-color: #EDEFF3;
+                border-inline-start-width: 0px;
+                border-inline-end-width: 0px;
+                border: none;
+                justify-content: center;
+                span {
+                    font-weight: 700;
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: #5A6276;
+                }
+            }
+            .k-master-row {
+                background-color: #FFFFFF;
+                td {
+                    padding-top: 0px;
+                    padding-bottom: 0px;
+                    font-weight: 700;
+                    font-size: 13px;
+                    line-height: 16px;
+                    color: #5A6276;
+                }
+            }
+
+            .whole-cell{
+                background-color: #FFFFFF;
+                border-style: none;
+                border-radius: 0%;
+                padding: 25px 5px 25px 10px;
+                color: #959DB3;
+                
+            }
+
+            .whole-cell:focus {
+                border-style: none;
+                box-shadow: none;
+            }
+
+
+        }
+        .k-pager {
+            background-color: #EDEFF3;
+            border-style: none;
+        }
+        .k-pager:focus {
+            box-shadow: none;
+        }
+    }
+
+    .k-grid .k-table-tbody > .k-table-row:not(.k-detail-row):hover, .k-grid .k-table-tbody > .k-table-row:not(.k-detail-row).k-hover{
+        background-color: #FFFFFF;
+    }
+
+    
+    .gia-tri {
+        margin: 20px;
+        border-radius: 3px;
+        text-align: center;
+        color: #FFFFFF;
+        background-color: #008000;
+        padding: 5px 15px;
+    }
+    
+    .k-pager {
+        display: inline;
+        padding-inline: 0;
+        gap:0;
+        .page-sizes {
+            flex-direction: row-reverse;
+            flex-grow: 1;
+        }
+    }
+}
+
+
+
+

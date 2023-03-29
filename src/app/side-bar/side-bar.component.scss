@@ -1,0 +1,62 @@
+hr{
+    position: relative;
+    top: 50px;
+    opacity: 0.3;
+    color: #FFFFFF;
+}
+
+.k-panelbar.panel-bar{
+    position: relative;
+    top: 55px;
+    border-style: none ;
+
+    .k-i-copy.k-panelbar-item-icon.k-icon {
+        padding-right: 20px;
+        color: white;
+    }
+    
+    .k-panelbar-header{
+        border-style: none;
+    }
+
+    .k-link{
+        color: #FFFFFF;
+        background-color: #5A6276;
+    }
+
+    .k-link:hover {
+        background-color: #5A6276;
+    }
+
+    .k-link:focus {
+        box-shadow:none;
+    }
+
+    .k-link.k-selected {
+        background-color: rgba(26, 35, 52, 1);
+        box-shadow:none;
+    }
+
+
+    .k-link.k-selected:hover {
+        background-color: rgba(26, 35, 52, 1);
+    }
+
+    .k-expanded .k-link {
+        background-color: rgba(26, 35, 52, 1);
+    }
+
+    .k-panelbar-group {
+        .k-panelbar-item > .k-link {
+            padding: 15px;
+            padding-left: 50px;
+            color: #FFFFFF;
+            background-color: rgba(26, 35, 52, 1);
+        }
+        .k-panelbar-item > .k-link.k-link.k-selected {
+            background-color: rgba(26, 35, 52, 0.5);
+            border-style: none ;
+            box-shadow: none;
+        }
+    }
+}

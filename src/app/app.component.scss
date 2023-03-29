@@ -1,0 +1,28 @@
+.side-bar{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 15%;
+    float: left;    
+    background-color: #5A6276;
+    height: 1010px;
+}
+.top-bar{
+    position: fixed;
+    width: 85%;
+    left: 15.5%;
+    top: 0%;
+    z-index:1000;
+    box-shadow: 0px 8px 10px -8px grey;
+}
+
+.main-content {
+    // border: 1px solid black;
+    position: relative;
+    width: 85%;
+    float: left;
+    left: 15.5%;
+    top: 60px;
+}
+
+
